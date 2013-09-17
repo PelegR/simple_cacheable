@@ -5,6 +5,7 @@ module Cacheable
 
       class_eval do
         after_commit :expire_key_cache, on: :update
+        memoize_cached_methods
       end
 
       define_singleton_method("find_cached") do |id|

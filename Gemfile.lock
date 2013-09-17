@@ -37,7 +37,15 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.0)
     atomic (1.1.10)
+    atomic (1.1.10-java)
     builder (3.1.4)
+    columnize (0.3.6)
+    debugger (1.6.1)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+      debugger-ruby_core_source (~> 1.2.3)
+    debugger-linecache (1.2.0)
+    debugger-ruby_core_source (1.2.3)
     diff-lcs (1.1.3)
     erubis (2.7.0)
     hike (1.2.3)
@@ -93,6 +101,8 @@ GEM
     thor (0.18.1)
     thread_safe (0.1.2)
       atomic
+    thread_safe (0.1.2-java)
+      atomic
     tilt (1.4.1)
     treetop (1.4.14)
       polyglot
@@ -106,6 +116,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord-jdbc-adapter
   activerecord-jdbcsqlite3-adapter
+  debugger
   jruby-memcached
   memcached
   mocha (= 0.10.5)
