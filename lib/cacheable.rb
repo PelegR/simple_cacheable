@@ -1,4 +1,5 @@
 require 'uri'
+require 'memoist'
 require "cacheable/caches"
 require "cacheable/keys"
 require "cacheable/expiry"
@@ -9,7 +10,7 @@ module Cacheable
     base.extend(Cacheable::Caches)
     base.send :include, Cacheable::Keys
     base.send :include, Cacheable::Expiry
-    base.send :include, Cacheable::Memoization
+    base.send :extend, Cacheable::Memoization
     base.send :extend,  ClassMethods
     base.class_eval do
       class_attribute   :cached_key,
